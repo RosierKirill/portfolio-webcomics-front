@@ -6,16 +6,15 @@ const CharacterCard = ({ character }) => {
 
   return (
     <div className="character-card">
-      <h3>{character.name}</h3>
       <img
         src={character.image_url || placeholderImage}
-        alt={character.name}
+        alt={character.name || 'Image personnage'}
         onError={(e) => {
-          if (e.target.src !== placeholderImage) {
-            e.target.src = placeholderImage;
-          }
+          e.target.onerror = null;
+          e.target.src = placeholderImage;
         }}
       />
+      <h3>{character.name}</h3>
       <p>{character.general_info}</p>
       <Link to={`/character/${character.id}`}>Voir détails</Link>
     </div>
