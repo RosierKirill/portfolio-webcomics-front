@@ -2,16 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CharacterCard = ({ character }) => {
-  const placeholderImage = 'https://dummyimage.com/300x200/cccccc/ffffff.png&text=No+Image';
+  const defaultImage = '/images/default.jpg'; // image dans public/images/
+  const imageSrc = character.image_url
+    ? `/images/${character.image_url}`
+    : defaultImage;
 
   return (
     <div className="character-card">
       <img
-        src={character.image_url || placeholderImage}
+        src={imageSrc}
         alt={character.name || 'Image personnage'}
         onError={(e) => {
           e.target.onerror = null;
-          e.target.src = placeholderImage;
+          e.target.src = defaultImage;
         }}
       />
       <h3>{character.name}</h3>
