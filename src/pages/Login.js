@@ -13,11 +13,13 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/api/users/login`, formData);
+      const API_URL = process.env.REACT_APP_API_URL || "https://portfolio-webcomics-back-production.up.railway.app/api";
+      const { data } = await axios.post(`${API_URL}/users/login`, formData);
       localStorage.setItem('token', data.token);
       navigate('/');
     } catch (error) {
       console.error('Erreur:', error);
+      alert("Échec de la connexion. Vérifie ton email et mot de passe.");
     }
   };
 
@@ -25,8 +27,19 @@ const Login = () => {
     <div>
       <h1>Connexion</h1>
       <form onSubmit={handleSubmit}>
-        <input name="email" value={formData.email} onChange={handleChange} placeholder="Email" />
-        <input name="password" type="password" value={formData.password} onChange={handleChange} placeholder="Mot de passe" />
+        <input
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder="Email"
+        />
+        <input
+          name="password"
+          type="password"
+          value={formData.password}
+          onChange={handleChange}
+          placeholder="Mot de passe"
+        />
         <button type="submit">Se connecter</button>
       </form>
     </div>
