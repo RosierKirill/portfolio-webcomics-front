@@ -17,7 +17,7 @@ const CharacterForm = ({ characterId, onSubmit }) => {
     const fetchCharacter = async () => {
       try {
         if (characterId) {
-          const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/characters/${characterId}`);
+          const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/characters/${characterId}`);
           if (isMounted) {
             setFormData(data);
           }
