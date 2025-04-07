@@ -2,15 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CharacterCard = ({ character }) => {
-  const defaultImage = '/images/default.jpg'; // image dans public/images/
-  const imageSrc = character.image_url
-    ? `/images/${character.image_url}`
-    : defaultImage;
+  const defaultImage = '/images/default.jpg';
+
+  const getImagePath = () => {
+    if (!character.image_url || character.image_url.trim() === '') {
+      return defaultImage;
+    }
+    return `/images/${character.image_url}`;
+  };
 
   return (
     <div className="character-card">
       <img
-        src={imageSrc}
+        src={getImagePath()}
         alt={character.name || 'Image personnage'}
         onError={(e) => {
           e.target.onerror = null;
