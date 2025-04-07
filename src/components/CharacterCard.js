@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CharacterCard = ({ character }) => {
-  const defaultImage = '/public/default.jpg'; // image dans public/
+  const defaultImage = '/images/default.jpg'; // image dans public/images/
   const imageSrc = character.image_url
-    ? `/public/${character.image_url}`
+    ? `/images/${character.image_url}`
     : defaultImage;
 
   return (
