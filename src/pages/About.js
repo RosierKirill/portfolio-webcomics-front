@@ -28,13 +28,13 @@ const About = () => {
           Télécharger mon CV
         </a>
         {window.location.pathname !== '/cv.pdf' && (
-  <iframe
-    src="/cv.pdf"
-    title="CV"
-    width="100%"
-    height="500px"
-  />
-)}
+          <iframe
+            src="/cv.pdf"
+            title="CV"
+            width="100%"
+            height="500px"
+          />
+        )}
       </div>
     </div>
   );
