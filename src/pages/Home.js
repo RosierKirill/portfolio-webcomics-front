@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import API from '../utils/api'; // ajuste le chemin si besoin
 import CharacterCard from '../components/CharacterCard';
 
 const Home = () => {
@@ -8,9 +8,7 @@ const Home = () => {
   useEffect(() => {
     const fetchCharacters = async () => {
       try {
-        const API_URL = process.env.REACT_APP_API_URL || 'https://portfolio-webcomics-back-production.up.railway.app';
-
-        const response = await API_URL.get(`/characters`);
+        const response = await API.get('/characters');
         setCharacters(response.data);
       } catch (error) {
         console.error('Erreur lors de la requête:', error);
