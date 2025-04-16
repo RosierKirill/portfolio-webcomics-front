@@ -27,12 +27,14 @@ const About = () => {
         <a href="/cv.pdf" download="RosierKirill.pdf">
           Télécharger mon CV
         </a>
-        <iframe
-          src="/cv.pdf"
-          title="CV"
-          width="100%"
-          height="500px"
-        />
+        {window.location.pathname !== '/cv.pdf' && (
+  <iframe
+    src="/cv.pdf"
+    title="CV"
+    width="100%"
+    height="500px"
+  />
+)}
       </div>
     </div>
   );
