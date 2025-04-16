@@ -25,6 +25,8 @@ const Navbar = () => {
           <Link to="/register" className="button button-secondary">Inscription</Link>
         </>
       )}
+
+      <Link to="/about" className="button">A Propos</Link>
     </nav>
   );
 };

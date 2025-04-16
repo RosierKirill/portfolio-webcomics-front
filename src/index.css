@@ -193,13 +193,6 @@ button:hover {
   color: #1a1a1a;
 }
 
-/* Message "Aucun personnage" */
-p:empty::before {
-  content: "Aucun personnage à afficher";
-  color: #777;
-  font-style: italic;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   nav {

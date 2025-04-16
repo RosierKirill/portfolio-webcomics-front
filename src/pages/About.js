@@ -24,10 +24,9 @@ const About = () => {
         Je suis [Votre Nom], le développeur de ce projet. Voici mon CV pour en savoir plus sur mes compétences et mon parcours :
       </p>
       <div>
-        <a href="/cv.pdf" download="CV_[Votre_Nom].pdf">
+        <a href="/cv.pdf" download="RosierKirill.pdf">
           Télécharger mon CV
         </a>
-        {/* Si vous voulez afficher le PDF directement */}
         <iframe
           src="/cv.pdf"
           title="CV"
