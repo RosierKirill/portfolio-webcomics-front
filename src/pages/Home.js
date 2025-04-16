@@ -10,7 +10,7 @@ const Home = () => {
       try {
         const API_URL = process.env.REACT_APP_API_URL || 'https://portfolio-webcomics-back-production.up.railway.app';
 
-        const response = await axios.get(`${API_URL}/characters`);
+        const response = await axios.get(`${API_URL}characters`);
         setCharacters(response.data);
       } catch (error) {
         console.error('Erreur lors de la requête:', error);
