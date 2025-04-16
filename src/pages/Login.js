@@ -13,7 +13,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const API_URL = process.env.REACT_APP_API_URL || "https://portfolio-webcomics-back-production.up.railway.app/api";
+      const API_URL = process.env.REACT_APP_API_URL || "https://portfolio-webcomics-back-production.up.railway.app";
       const { data } = await axios.post(`${API_URL}/users/login`, formData);
       localStorage.setItem('token', data.token);
       navigate('/');

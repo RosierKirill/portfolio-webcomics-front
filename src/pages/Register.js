@@ -10,7 +10,7 @@ const Register = ({ history }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(`${process.env.REACT_APP_API_URL}/api/users/register`, formData)
+    axios.post(`${process.env.REACT_APP_API_URL}/users/register`, formData)
       .then(() => window.location.href = '/login')
       .catch(error => console.error('Erreur:', error));
   };
