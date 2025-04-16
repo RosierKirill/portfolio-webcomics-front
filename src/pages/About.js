@@ -24,7 +24,7 @@ const About = () => {
         Je suis Rosier Kirill, le développeur de ce projet. Voici mon CV :
       </p>
       <div>
-        <a href="/cv.pdf" download="RosierKirill.pdf">
+        <a href="../public/cv.pdf" download="RosierKirill.pdf">
           Télécharger mon CV
         </a>
       </div>
