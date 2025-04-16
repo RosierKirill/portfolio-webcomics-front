@@ -13,7 +13,7 @@ const About = () => {
         <li>Une page d'accueil avec un catalogue de personnages.</li>
         <li>Une page de détails pour chaque personnage avec rendu 3D via Three.js.</li>
         <li>Des fonctionnalités d'inscription, connexion, ajout et édition de personnages.</li>
-        <li>Un design sombre et futuriste avec des placeholders pour les images et modèles 3D.</li>
+        <li>Un design simple avec des placeholders pour les images et modèles 3D.</li>
       </ul>
       <p>
         Le backend utilise Node.js, Express.js et MySQL pour gérer les données, tandis que le frontend est construit avec React pour une interface dynamique. Ce projet est un prototype évolutif, avec des plans pour ajouter plus de contenu (événements, lieux) et améliorer l'interactivité (contrôles 3D, filtres, etc.).
@@ -21,20 +21,12 @@ const About = () => {
 
       <h2>Mon CV</h2>
       <p>
-        Je suis [Votre Nom], le développeur de ce projet. Voici mon CV pour en savoir plus sur mes compétences et mon parcours :
+        Je suis Rosier Kirill, le développeur de ce projet. Voici mon CV :
       </p>
       <div>
         <a href="/cv.pdf" download="RosierKirill.pdf">
           Télécharger mon CV
         </a>
-        {window.location.pathname !== '/cv.pdf' && (
-          <iframe
-            src="/cv.pdf"
-            title="CV"
-            width="100%"
-            height="500px"
-          />
-        )}
       </div>
     </div>
   );
