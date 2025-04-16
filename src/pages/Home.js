@@ -9,7 +9,6 @@ const Home = () => {
     const fetchCharacters = async () => {
       try {
         const baseURL = process.env.REACT_APP_API_URL || 'https://portfolio-webcomics-back-production.up.railway.app';
-        const API_URL = baseURL.replace(/\/+$/, ''); // supprime slashes finaux
 
         const response = await axios.get(`${API_URL}/characters`);
         setCharacters(response.data);
