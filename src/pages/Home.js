@@ -8,10 +8,10 @@ const Home = () => {
   useEffect(() => {
     const fetchCharacters = async () => {
       try {
-        const baseURL = process.env.REACT_APP_API_URL || 'https://portfolio-webcomics-back-production.up.railway.app/';
+        const baseURL = process.env.REACT_APP_API_URL || 'https://portfolio-webcomics-back-production.up.railway.app';
         const API_URL = baseURL.endsWith('/') ? baseURL : baseURL + '/';
         
-        const response = await axios.get(`${API_URL}api/characters`);
+        const response = await axios.get(`${API_URL}/characters`);
         setCharacters(response.data);
       } catch (error) {
         console.error('Erreur lors de la requête:', error);
