@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import API from '../utils/api'; // ajuste le chemin si besoin
+import API from '../api'; // ajuste le chemin si besoin
 import CharacterCard from '../components/CharacterCard';
 
 const Home = () => {
