@@ -17,7 +17,7 @@ const CharacterForm = ({ characterId, onSubmit }) => {
     const fetchCharacter = async () => {
       try {
         if (characterId) {
-          const API_URL = process.env.REACT_APP_API_URL || 'https://portfolio-webcomics-back-production.up.railway.app/api';
+          const API_URL = process.env.REACT_APP_API_URL || 'https://portfolio-webcomics-back-production.up.railway.app';
           const { data } = await axios.get(`${API_URL}/characters/${characterId}`);
           if (isMounted) {
             setFormData(data);
